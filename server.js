@@ -79,7 +79,6 @@ app.use('/faqsUpdate', require('./routes/api/faqs/faqsUpdate'));
 app.use('/faqsDelete', require('./routes/api/faqs/faqsDelete'));
 
 // server static accet in production 
-
 if (process.env.NODE_ENV === 'production') {
 
     // set static folder
@@ -89,6 +88,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 
 }
+
 
 const port = process.env.port || 5000;
 
