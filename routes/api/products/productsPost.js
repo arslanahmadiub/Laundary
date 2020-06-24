@@ -8,13 +8,14 @@ router.post('/',
 
 
     async (req, res) => {
-        const { id, productName, categoryName, status } = req.body;
+        const { id, productName, categoryName, status, imageUrl } = req.body;
 
         try {
             let product = new Product({
                 id: id,
                 productName: productName,
                 categoryName: categoryName,
+                imageUrl: imageUrl,
                 status: status
             });
             await product.save();
@@ -24,6 +25,7 @@ router.post('/',
             console.error(err.message);
             res.status(500).send('Server Error...')
         }
+        res.send(req.file)
 
     });
 

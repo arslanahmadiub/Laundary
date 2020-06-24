@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 
-// app.get('/', (req, res) => res.send('Api Running'));
+app.get('/', (req, res) => res.send('Api Running'));
 
 
 // services route
